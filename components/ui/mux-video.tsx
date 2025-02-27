@@ -87,7 +87,7 @@ export function MuxVideo({ src, playbackId, image }: MuxVideoProps) {
       }}
     >
       <MorphingDialogTrigger>
-        <div className="aspect-video w-full cursor-zoom-in overflow-hidden rounded-xl">
+        <div className="aspect-auto w-full cursor-zoom-in overflow-hidden rounded-xl">
           {playbackId ? (
             <MuxPlayer
               playbackId={playbackId}
@@ -131,9 +131,9 @@ export function MuxVideo({ src, playbackId, image }: MuxVideoProps) {
                   {
                     height: '100%',
                     width: '100%',
-                    objectFit: 'cover',
+                    objectFit: 'contain',
                     '--controls': 'none',
-                    '--media-object-fit': 'cover',
+                    '--media-object-fit': 'contain',
                   } as React.CSSProperties
                 }
                 streamType="on-demand"
@@ -144,7 +144,7 @@ export function MuxVideo({ src, playbackId, image }: MuxVideoProps) {
                 autoPlay
                 loop
                 muted
-                className="h-full w-full object-cover"
+                className="h-full w-full object-contain"
               />
             ) : null}
           </div>
