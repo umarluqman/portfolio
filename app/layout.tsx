@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   title: 'Umar Luqman Porfolio',
   description:
     'Frontend Engineer, Bitcoin enthusiast, and open-source contributor.',
+  icons: {
+    icon: '/favicon-32x32.png',
+  },
 }
 
 const geist = Geist({
