@@ -107,7 +107,16 @@ export default function Personal() {
         <div className="flex-1">
           <p className="text-zinc-600 dark:text-zinc-400">
             Focused on creating intuitive and performant mobile/web experiences.
-            Bridging the gap between design and development.
+            Member of
+            <a
+              href="https://senjihouse.com.my/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-base group relative inline-block px-0 font-[450] text-zinc-900 dark:text-zinc-50"
+            >
+              Plebnet.dev
+              <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full dark:bg-zinc-50"></span>
+            </a>
           </p>
         </div>
       </motion.section>
