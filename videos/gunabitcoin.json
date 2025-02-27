@@ -1,0 +1,8 @@
+{
+  "provider": "mux",
+  "title": "GunaBitcoin",
+  "description": "Directory website for all local merchants in Malaysia that accept Bitcoin.",
+  "muxPlaybackId": "YOUR_MUX_PLAYBACK_ID_HERE",
+  "blurDataURL": "",
+  "aspectRatio": "16:9"
+}

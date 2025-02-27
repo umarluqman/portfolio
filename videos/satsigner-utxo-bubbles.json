@@ -1,0 +1,8 @@
+{
+  "provider": "mux",
+  "title": "UTXO Bubbles for Satsigner",
+  "description": "Interactive UTXO visualizer for advanced Bitcoin wallet with coin control.",
+  "muxPlaybackId": "5ATdzd6g2PZCOJ00wXQz4L1XnhYmGDc00h3AR02I8lR8k8",
+  "blurDataURL": "",
+  "aspectRatio": "16:9"
+}

@@ -1,0 +1,35 @@
+{
+  "projects": [
+    {
+      "name": "UTXO Bubbles - Satsigner",
+      "description": "Interactive UTXO visualizer for advanced Bitcoin wallet with coin control.",
+      "link": "https://satsigner.com/",
+      "video": "/videos/satsigner-utxo-bubbles.mp4",
+      "id": "satsigner-utxo-bubbles",
+      "muxPlaybackId": "5ATdzd6g2PZCOJ00wXQz4L1XnhYmGDc00h3AR02I8lR8k8"
+    },
+    {
+      "name": "Guna Bitcoin",
+      "description": "Directory website for all local merchants in Malaysia that accept Bitcoin.",
+      "link": "https://gunabitcoin.com/",
+      "image": "/gunabitcoin.png",
+      "id": "gunabitcoin"
+    },
+    {
+      "name": "Focus Mode",
+      "description": "Browser extension for intentional distraction-free browsing. 17000+ users with 4.7/5 rating on Chrome Web Store.",
+      "link": "https://focusmode.app/",
+      "video": "/videos/focusmode.mp4",
+      "id": "focusmode",
+      "muxPlaybackId": "lJbYNiKV2MyLpqKktss1Cy9Ylk02yLHYjkuvR5KULmY00"
+    },
+    {
+      "name": "Dialisis MY",
+      "description": "The only directory website for all 900+ dialysis centers in Malaysia. Around almost 3000+ unique visitors in 3 months.",
+      "link": "https://dialisis.my/",
+      "video": "/videos/dialisis-my.mp4",
+      "id": "dialisis-my",
+      "muxPlaybackId": "IYd7LVPiqPTAZiqSiKtxwYbIAeFQ7LyaveByt026S7sQ"
+    }
+  ]
+}
