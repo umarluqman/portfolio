@@ -1,0 +1,89 @@
+<Cover
+  src="/images/cover.jpg"
+  alt="Image from the movie Alien - from cosmos.com"
+  caption=""
+/>
+
+# 3 UI / UX Improvements for The Bitcoin Company and How to Implement Them
+
+This is part of the interview process for Senior Frontend (React Native) Developer position in The Bitcoin Company.
+
+---
+
+## 1. Call-to-Action Buttons Above the Fold
+
+A tiny but important design principle is to put call-to-action buttons where users can see them right away after entering the page. This helps turn visitors into customers. When users can see these buttons without having to scroll down, it:
+
+- Captures Immediate Attention: Users decide within seconds whether to engage, making above-the-fold placement crucial.
+- Reduces Friction: Eliminating the need to scroll removes a potential barrier to user conversion.
+
+Here's how I propose to fix it:
+
+<Cover
+  src="/images/above-the-fold-before.png"
+  alt="Screenshot showing the current placement of CTA buttons below the fold"
+  caption="Current: CTA buttons require scrolling to discover"
+/>
+
+<Cover
+  src="/images/above-the-fold-change.png"
+  alt="Diagram showing the code changes needed to move CTAs above the fold"
+  caption="Implementation: Moving CTAs above the fold requires removing the 'margin-top' when in desktop view, in mobile view it's already above the fold"
+/>
+
+<Cover
+  src="/images/above-the-fold-after.png"
+  alt="Screenshot showing the improved placement of CTA buttons above the fold"
+  caption="Improved: CTA buttons immediately visible without scrolling"
+/>
+
+---
+
+## 2. Dropdown Component Instead of Redirecting User to a New Page to Change Country
+
+This little change will make the user experience much better.
+
+Instead of redirecting the user to a new page to change country, we can use a dropdown component to let user choose the country and the storelist should be reflected accordingly if we do it right.
+We are reducing the steps for the user from 3 steps to a single step. Thus, making it more accessible and user friendly.
+
+Here's the before and after:
+
+<Cover
+  src="/images/reduce-step-before.png"
+  alt="Screenshot showing the improved placement of CTA buttons above the fold"
+  caption="Current: User needs to go to the new page just to change country"
+/>
+
+<Cover
+  src="/images/reduce-step-after.png"
+  alt="Screenshot showing the improved placement of CTA buttons above the fold"
+  caption="Improved: User can select a country from a Dropdown and the store list should reflect accordingly"
+/>
+
+Since The Bitcoin Company web application is using Tailwind CSS, I would like to propose the combination of [Popover](https://ui.shadcn.com/docs/components/popover) and [Combobox](https://ui.shadcn.com/docs/components/combobox) components that is using the same design language as the rest of the application. Here's the [code](https://github.com/umarluqman/thebtcco-web-app) for it.
+
+---
+
+## 3. Less Wider Form to Look More Professional
+
+<Cover
+  src="/images/form-too-wide-before.png"
+  alt="Screenshot showing the current placement of CTA buttons below the fold"
+  caption="Current: The form takes too much width on desktop"
+/>
+
+<Cover
+  src="/images/form-too-wide-change.png"
+  alt="Diagram showing the code changes needed to move CTAs above the fold"
+  caption="Implementation: Changing the max width from 'max-w-7xl' to 'max-w-2xl' is the way to go"
+/>
+
+<Cover
+  src="/images/form-too-wide-after.png"
+  alt="Screenshot showing the improved placement of CTA buttons above the fold"
+  caption="Improved: The form looks less wide and more professional"
+/>
+
+---
+
+While The Bitcoin Company's primary focus is on their mobile application, I believe these straightforward UI/UX improvements to the web application could provide additional value and enhance the overall user experience across platforms.
