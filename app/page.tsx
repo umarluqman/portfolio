@@ -107,7 +107,7 @@ export default function Personal() {
         <div className="flex-1">
           <p className="text-zinc-600 dark:text-zinc-400">
             Focused on creating intuitive and performant mobile/web experiences.
-            Member of
+            Member of{' '}
             <a
               href="https://plebnet.dev/"
               target="_blank"
