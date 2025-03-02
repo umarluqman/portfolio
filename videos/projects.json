@@ -1,6 +1,14 @@
 {
   "projects": [
     {
+      "name": "Transaction History - satsigner",
+      "description": "Interactive UTXO visualizer for advanced Bitcoin wallet with coin control.",
+      "link": "https://nostrudel.ninja/#/u/npub1dhfmwt3jtknnswe8tmh3cesnrwjxvsexu93tcps9yagfkn3n4epsa3d8yn/notes",
+      "video": "/videos/satsigner-transaction-history.mp4",
+      "id": "satsigner-transaction-history",
+      "muxPlaybackId": "Y4OEzOnW5GOXdt541y00coJ6800k7CxPZ9wyS01zW9D2OU"
+    },
+    {
       "name": "UTXO Bubbles - satsigner",
       "description": "Interactive UTXO visualizer for advanced Bitcoin wallet with coin control.",
       "link": "https://nostrudel.ninja/#/u/npub1dhfmwt3jtknnswe8tmh3cesnrwjxvsexu93tcps9yagfkn3n4epsa3d8yn/notes",
@@ -23,14 +31,7 @@
       "id": "focusmode",
       "muxPlaybackId": "lJbYNiKV2MyLpqKktss1Cy9Ylk02yLHYjkuvR5KULmY00"
     },
-    {
-      "name": "Transaction History - satsigner",
-      "description": "Interactive UTXO visualizer for advanced Bitcoin wallet with coin control.",
-      "link": "https://nostrudel.ninja/#/u/npub1dhfmwt3jtknnswe8tmh3cesnrwjxvsexu93tcps9yagfkn3n4epsa3d8yn/notes",
-      "video": "/videos/satsigner-transaction-history.mp4",
-      "id": "satsigner-transaction-history",
-      "muxPlaybackId": "Y4OEzOnW5GOXdt541y00coJ6800k7CxPZ9wyS01zW9D2OU"
-    },
+
     {
       "name": "Dialisis MY",
       "description": "The only directory website for all 900+ dialysis centers in Malaysia. Around almost 3000+ unique visitors in 3 months.",
