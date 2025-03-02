@@ -1,9 +1,9 @@
 {
   "projects": [
     {
-      "name": "UTXO Bubbles - Satsigner",
+      "name": "UTXO Bubbles - satsigner",
       "description": "Interactive UTXO visualizer for advanced Bitcoin wallet with coin control.",
-      "link": "https://satsigner.com/",
+      "link": "https://nostrudel.ninja/#/u/npub1dhfmwt3jtknnswe8tmh3cesnrwjxvsexu93tcps9yagfkn3n4epsa3d8yn/notes",
       "video": "/videos/satsigner-utxo-bubbles.mp4",
       "id": "satsigner-utxo-bubbles",
       "muxPlaybackId": "5ATdzd6g2PZCOJ00wXQz4L1XnhYmGDc00h3AR02I8lR8k8"
@@ -22,6 +22,14 @@
       "video": "/videos/focusmode.mp4",
       "id": "focusmode",
       "muxPlaybackId": "lJbYNiKV2MyLpqKktss1Cy9Ylk02yLHYjkuvR5KULmY00"
+    },
+    {
+      "name": "Transaction History - satsigner",
+      "description": "Interactive UTXO visualizer for advanced Bitcoin wallet with coin control.",
+      "link": "https://nostrudel.ninja/#/u/npub1dhfmwt3jtknnswe8tmh3cesnrwjxvsexu93tcps9yagfkn3n4epsa3d8yn/notes",
+      "video": "/videos/satsigner-transaction-history.mp4",
+      "id": "satsigner-transaction-history",
+      "muxPlaybackId": "Y4OEzOnW5GOXdt541y00coJ6800k7CxPZ9wyS01zW9D2OU"
     },
     {
       "name": "Dialisis MY",
