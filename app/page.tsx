@@ -109,7 +109,7 @@ export default function Personal() {
             Focused on creating intuitive and performant mobile/web experiences.
             Member of
             <a
-              href="https://senjihouse.com.my/"
+              href="https://plebnet.dev/"
               target="_blank"
               rel="noopener noreferrer"
               className="font-base group relative inline-block px-0 font-[450] text-zinc-900 dark:text-zinc-50"
