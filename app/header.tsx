@@ -16,7 +16,7 @@ export function Header() {
           className="text-zinc-600 dark:text-zinc-500"
           delay={0.5}
         >
-          Bitcoin-only Frontend Engineer
+          Frontend Engineer
         </TextEffect>
       </div>
     </header>
