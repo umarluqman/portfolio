@@ -1,12 +1,24 @@
 {
   "projects": [
     {
+      "name": "Sovereign Bitcoin app (iOS)",
+      "note": "Revealed soon, currently in App Store review",
+      "description": "Operational control for Bitcoin - wallets and mining monitoring, UTXO management, Advanced PSBT workflows.",
+      "link": "",
+      "id": "sovereign-bitcoin-app",
+      "muxPlaybackId": "ILCd2D00WT1t11vU2yM3ao00N8E00cOGjMHyLY3MP6r6d00",
+      "category": "Bitcoin",
+      "portrait": true
+    },
+    {
       "name": "Transaction History - satsigner",
       "description": "Interactive UTXO visualizer for advanced Bitcoin wallet with coin control.",
       "link": "https://nostrudel.ninja/#/u/npub1dhfmwt3jtknnswe8tmh3cesnrwjxvsexu93tcps9yagfkn3n4epsa3d8yn/notes",
       "video": "/videos/satsigner-transaction-history.mp4",
       "id": "satsigner-transaction-history",
-      "muxPlaybackId": "Y4OEzOnW5GOXdt541y00coJ6800k7CxPZ9wyS01zW9D2OU"
+      "muxPlaybackId": "Y4OEzOnW5GOXdt541y00coJ6800k7CxPZ9wyS01zW9D2OU",
+      "category": "Bitcoin",
+      "portrait": true
     },
     {
       "name": "UTXO Bubbles - satsigner",
@@ -14,14 +26,24 @@
       "link": "https://nostrudel.ninja/#/u/npub1dhfmwt3jtknnswe8tmh3cesnrwjxvsexu93tcps9yagfkn3n4epsa3d8yn/notes",
       "video": "/videos/satsigner-utxo-bubbles.mp4",
       "id": "satsigner-utxo-bubbles",
-      "muxPlaybackId": "5ATdzd6g2PZCOJ00wXQz4L1XnhYmGDc00h3AR02I8lR8k8"
+      "muxPlaybackId": "5ATdzd6g2PZCOJ00wXQz4L1XnhYmGDc00h3AR02I8lR8k8",
+      "category": "Bitcoin",
+      "portrait": true
     },
     {
       "name": "Guna Bitcoin",
       "description": "Directory website for all local merchants in Malaysia that accept Bitcoin.",
       "link": "https://gunabitcoin.com/",
       "image": "/gunabitcoin.png",
-      "id": "gunabitcoin"
+      "id": "gunabitcoin",
+      "category": "Bitcoin"
+    },
+    {
+      "name": "Dialisis MY",
+      "description": "The most comprehensive dialysis direcotry for all dialysis centers in Malaysia, using programmatic SEO. Almost 6000+ unique visitors per month.",
+      "link": "https://dialisis.my/",
+      "id": "dialisis-my",
+      "category": "SEO"
     },
     {
       "name": "Focus Mode",
@@ -29,16 +51,8 @@
       "link": "https://focusmode.app/",
       "video": "/videos/focusmode.mp4",
       "id": "focusmode",
-      "muxPlaybackId": "lJbYNiKV2MyLpqKktss1Cy9Ylk02yLHYjkuvR5KULmY00"
-    },
-
-    {
-      "name": "Dialisis MY",
-      "description": "The only directory website for all 900+ dialysis centers in Malaysia. Around almost 3000+ unique visitors in 3 months.",
-      "link": "https://dialisis.my/",
-      "video": "/videos/dialisis-my.mp4",
-      "id": "dialisis-my",
-      "muxPlaybackId": "IYd7LVPiqPTAZiqSiKtxwYbIAeFQ7LyaveByt026S7sQ"
+      "muxPlaybackId": "lJbYNiKV2MyLpqKktss1Cy9Ylk02yLHYjkuvR5KULmY00",
+      "category": "Others"
     }
   ]
 }

@@ -21,10 +21,18 @@ type SocialLink = {
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
+    company: 'to be disclosed',
+    title: 'iOS Engineer',
+    start: '5 / 2025',
+    end: '10 / 2026',
+    link: '',
+    id: 'work0',
+  },
+  {
     company: 'Satsiger',
-    title: 'Freelance Mobile Frontend Engineer',
-    start: '2024',
-    end: 'Present',
+    title: 'Mobile Frontend Engineer',
+    start: '5 / 2024',
+    end: '3 / 2025',
     link: 'https://satsigner.com/',
     id: 'work1',
   },

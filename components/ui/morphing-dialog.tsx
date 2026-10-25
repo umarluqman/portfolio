@@ -19,6 +19,7 @@ import {
 import { createPortal } from 'react-dom'
 import { cn } from '@/lib/utils'
 import { XIcon } from 'lucide-react'
+import { useMounted } from '@/hooks/useMounted'
 import useClickOutside from '@/hooks/useClickOutside'
 
 export type MorphingDialogContextType = {
@@ -228,12 +229,7 @@ export type MorphingDialogContainerProps = {
 
 function MorphingDialogContainer({ children }: MorphingDialogContainerProps) {
   const { isOpen, uniqueId } = useMorphingDialog()
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-    return () => setMounted(false)
-  }, [])
+  const mounted = useMounted()
 
   if (!mounted) return null
 

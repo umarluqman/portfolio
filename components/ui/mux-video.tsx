@@ -102,7 +102,7 @@ export function MuxVideo({ src, playbackId, image }: MuxVideoProps) {
                   objectFit: 'cover',
                   '--controls': 'none',
                   '--media-object-fit': 'cover',
-                } as React.CSSProperties
+                }
               }
               streamType="on-demand"
             />
@@ -134,7 +134,7 @@ export function MuxVideo({ src, playbackId, image }: MuxVideoProps) {
                     objectFit: 'contain',
                     '--controls': 'none',
                     '--media-object-fit': 'contain',
-                  } as React.CSSProperties
+                  }
                 }
                 streamType="on-demand"
               />

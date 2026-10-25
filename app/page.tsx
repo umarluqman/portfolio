@@ -1,6 +1,6 @@
 'use client'
 import { motion } from 'motion/react'
-import { XIcon } from 'lucide-react'
+import { ArrowUpRight, XIcon } from 'lucide-react'
 import { Spotlight } from '@/components/ui/spotlight'
 import { Magnetic } from '@/components/ui/magnetic'
 import { MuxVideo } from '@/components/ui/mux-video'
@@ -13,7 +13,7 @@ import {
 } from '@/components/ui/morphing-dialog'
 import Link from 'next/link'
 import { AnimatedBackground } from '@/components/ui/animated-background'
-import { useProjects } from '@/hooks/useProjects'
+import { useProjects, type Project } from '@/hooks/useProjects'
 import { WORK_EXPERIENCE, BLOG_POSTS, EMAIL, SOCIAL_LINKS } from './data'
 
 const TALKS = [
@@ -90,8 +90,55 @@ function MagneticSocialLink({
   )
 }
 
+const CATEGORIES = [
+  { key: 'Bitcoin', title: 'Bitcoin Projects' },
+  { key: 'SEO', title: 'SEO Projects' },
+  { key: 'Others', title: 'Other Projects' },
+]
+
+function ProjectCard({ project }: { project: Project }) {
+  const hasMedia = project.muxPlaybackId || project.image
+
+  return (
+    <div className="space-y-2">
+      {hasMedia && (
+        <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
+          <MuxVideo playbackId={project.muxPlaybackId} image={project.image} />
+        </div>
+      )}
+      <div className="px-1">
+        {project.link ? (
+          <a
+            className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
+            href={project.link}
+            target="_blank"
+          >
+            {project.name}
+            {!hasMedia && (
+              <ArrowUpRight className="ml-0.5 inline h-4 w-4 align-[-2px]" />
+            )}
+            <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full"></span>
+          </a>
+        ) : (
+          <p className="font-[450] text-zinc-900 dark:text-zinc-50">
+            {project.name}
+          </p>
+        )}
+        {project.note && (
+          <p className="text-sm text-zinc-500 dark:text-zinc-400">
+            {project.note}
+          </p>
+        )}
+        <p className="text-base text-zinc-600 dark:text-zinc-400">
+          {project.description}
+        </p>
+      </div>
+    </div>
+  )
+}
+
 export default function Personal() {
-  const { projects, loading } = useProjects()
+  const { projects } = useProjects()
 
   return (
     <motion.main
@@ -126,130 +173,33 @@ export default function Personal() {
         transition={TRANSITION_SECTION}
       >
         <h3 className="mb-5 text-lg font-medium">Selected Projects</h3>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-          {loading ? (
-            <p>Loading projects...</p>
-          ) : (
-            <>
-              {/* First column: UTXO Bubbles and Focus Mode */}
-              <div className="flex flex-col gap-6">
-                {/* UTXO Bubbles */}
-                <div className="space-y-2">
-                  <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-                    <MuxVideo
-                      playbackId={
-                        projects[0].muxPlaybackId !==
-                        'YOUR_MUX_PLAYBACK_ID_HERE'
-                          ? projects[0].muxPlaybackId
-                          : undefined
-                      }
-                      image={projects[0].image}
-                    />
+        <div className="space-y-10">
+          {CATEGORIES.map((category) => {
+            const items = projects.filter((p) => p.category === category.key)
+            return (
+              <div key={category.key} className="space-y-6">
+                <h4 className="text-sm font-medium text-zinc-500 dark:text-zinc-400">
+                  {category.title}
+                </h4>
+                {items.some((p) => p.portrait) && (
+                  <div className="grid grid-cols-1 items-start gap-6 sm:relative sm:left-1/2 sm:w-[min(960px,calc(100vw-2rem))] sm:-translate-x-1/2 sm:grid-cols-3">
+                    {items
+                      .filter((p) => p.portrait)
+                      .map((project) => (
+                        <ProjectCard key={project.id} project={project} />
+                      ))}
                   </div>
-                  <div className="px-1">
-                    <a
-                      className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
-                      href={projects[0].link}
-                      target="_blank"
-                    >
-                      {projects[0].name}
-                      <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full"></span>
-                    </a>
-                    <p className="text-base text-zinc-600 dark:text-zinc-400">
-                      {projects[0].description}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Focus Mode */}
-                <div className="space-y-2">
-                  <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-                    <MuxVideo
-                      playbackId={
-                        projects[2].muxPlaybackId !==
-                        'YOUR_MUX_PLAYBACK_ID_HERE'
-                          ? projects[2].muxPlaybackId
-                          : undefined
-                      }
-                      image={projects[2].image}
-                    />
-                  </div>
-                  <div className="px-1">
-                    <a
-                      className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
-                      href={projects[2].link}
-                      target="_blank"
-                    >
-                      {projects[2].name}
-                      <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full"></span>
-                    </a>
-                    <p className="text-base text-zinc-600 dark:text-zinc-400">
-                      {projects[2].description}
-                    </p>
-                  </div>
+                )}
+                <div className="grid grid-cols-1 items-start gap-6 sm:grid-cols-2">
+                  {items
+                    .filter((p) => !p.portrait)
+                    .map((project) => (
+                      <ProjectCard key={project.id} project={project} />
+                    ))}
                 </div>
               </div>
-
-              {/* Second column: Guna Bitcoin and Dialisis MY */}
-              <div className="flex flex-col gap-6">
-                {/* Guna Bitcoin */}
-                <div className="space-y-2">
-                  <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-                    <MuxVideo
-                      playbackId={
-                        projects[1].muxPlaybackId !==
-                        'YOUR_MUX_PLAYBACK_ID_HERE'
-                          ? projects[1].muxPlaybackId
-                          : undefined
-                      }
-                      image={projects[1].image}
-                    />
-                  </div>
-                  <div className="px-1">
-                    <a
-                      className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
-                      href={projects[1].link}
-                      target="_blank"
-                    >
-                      {projects[1].name}
-                      <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full"></span>
-                    </a>
-                    <p className="text-base text-zinc-600 dark:text-zinc-400">
-                      {projects[1].description}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Dialisis MY */}
-                <div className="space-y-2">
-                  <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-                    <MuxVideo
-                      playbackId={
-                        projects[3].muxPlaybackId !==
-                        'YOUR_MUX_PLAYBACK_ID_HERE'
-                          ? projects[3].muxPlaybackId
-                          : undefined
-                      }
-                      image={projects[3].image}
-                    />
-                  </div>
-                  <div className="px-1">
-                    <a
-                      className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
-                      href={projects[3].link}
-                      target="_blank"
-                    >
-                      {projects[3].name}
-                      <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full"></span>
-                    </a>
-                    <p className="text-base text-zinc-600 dark:text-zinc-400">
-                      {projects[3].description}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </>
-          )}
+            )
+          })}
         </div>
       </motion.section>
 
@@ -296,7 +246,7 @@ export default function Personal() {
       >
         <h3 className="mb-2 text-lg font-medium">Bitcoin Talks</h3>
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">
-          I've been speaking at Bitcoin local community
+          I&apos;ve been speaking at Bitcoin local community
           <a
             href="https://senjihouse.com.my/"
             target="_blank"

@@ -1,6 +1,3 @@
-'use client'
-
-import { useState, useEffect } from 'react'
 import projectsData from '@/videos/projects.json'
 
 export type Project = {
@@ -10,19 +7,12 @@ export type Project = {
   video?: string
   id: string
   muxPlaybackId?: string
+  note?: string
+  category: string
+  portrait?: boolean
   image?: string
 }
 
 export function useProjects() {
-  const [projects, setProjects] = useState<Project[]>([])
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    // In a real app, you might want to fetch this from an API
-    // but for simplicity, we're using the imported JSON
-    setProjects(projectsData.projects)
-    setLoading(false)
-  }, [])
-
-  return { projects, loading }
+  return { projects: projectsData.projects as Project[] }
 }

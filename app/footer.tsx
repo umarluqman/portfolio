@@ -3,7 +3,7 @@ import { AnimatedBackground } from '@/components/ui/animated-background'
 import { TextLoop } from '@/components/ui/text-loop'
 import { MonitorIcon, MoonIcon, SunIcon } from 'lucide-react'
 import { useTheme } from 'next-themes'
-import { useEffect, useState } from 'react'
+import { useMounted } from '@/hooks/useMounted'
 
 const THEMES_OPTIONS = [
   {
@@ -24,12 +24,8 @@ const THEMES_OPTIONS = [
 ]
 
 function ThemeSwitch() {
-  const [mounted, setMounted] = useState(false)
+  const mounted = useMounted()
   const { theme, setTheme } = useTheme()
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
 
   if (!mounted) {
     return null
@@ -72,8 +68,11 @@ export function Footer() {
       <div className="flex items-center justify-between">
         <a href="https://github.com/ibelick/nim" target="_blank">
           <TextLoop className="text-xs text-zinc-500">
-            <span>© 2025 Umar Luqman's Porfolio.</span>
+            <span>© 2026 Umar Luqman&apos;s Porfolio.</span>
             <span>Built with orange pills.</span>
+            <span>Bitcoin maximalist.</span>
+            <span>God-fearing individual.</span>
+            <span>High agency + unclenth.</span>
           </TextLoop>
         </a>
         <div className="text-xs text-zinc-400">
