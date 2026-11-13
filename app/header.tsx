@@ -1,8 +1,11 @@
 'use client'
 import { TextEffect } from '@/components/ui/text-effect'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 export function Header() {
+  const pathname = usePathname()
+
   return (
     <header className="mb-8 flex items-center justify-between">
       <div>
@@ -16,7 +19,9 @@ export function Header() {
           className="text-zinc-600 dark:text-zinc-500"
           delay={0.5}
         >
-          Bitcoin-only Engineer and SEO specialist
+          {pathname === '/dialisis'
+            ? 'Website, App & SEO specialist'
+            : 'Bitcoin-only Engineer and SEO specialist'}
         </TextEffect>
       </div>
     </header>
