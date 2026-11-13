@@ -1,6 +1,5 @@
 'use client'
 import { useState } from 'react'
-import { EMAIL } from '../data'
 
 type Lang = 'ms' | 'en'
 
@@ -364,7 +363,9 @@ const CONTENT = {
 function Cta({ label }: { label: string }) {
   return (
     <a
-      href={`mailto:${EMAIL}?subject=Sebut%20harga%20%2F%20Quote%20-%20Pusat%20Dialisis`}
+      href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}?text=${encodeURIComponent('Salam, saya ingin minta sebut harga laman web / aplikasi untuk pusat dialisis.')}`}
+      target="_blank"
+      rel="noopener noreferrer"
       className="inline-flex rounded-full bg-zinc-950 px-4 py-2 text-sm text-zinc-50 transition-colors hover:bg-zinc-700 dark:bg-zinc-50 dark:text-zinc-950 dark:hover:bg-zinc-300"
     >
       {label}
