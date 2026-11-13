@@ -182,7 +182,7 @@ export default function Personal() {
                   {category.title}
                 </h4>
                 {items.some((p) => p.portrait) && (
-                  <div className="grid grid-cols-1 items-start gap-6 sm:relative sm:left-1/2 sm:w-[min(960px,calc(100vw-2rem))] sm:-translate-x-1/2 sm:grid-cols-3">
+                  <div className="grid grid-cols-1 items-start gap-6 sm:grid-cols-3">
                     {items
                       .filter((p) => p.portrait)
                       .map((project) => (
